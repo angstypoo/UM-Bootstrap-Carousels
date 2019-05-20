@@ -1,0 +1,38 @@
+/** um slider manager css **/
+
+#umslidermanager .row {
+  margin-bottom:15px;
+}
+#umslidermanager .umaddslideritemimagepreview, #umslidermanager .umslideredititemimagepreview {
+  width:100%;
+  height:200px;
+  overflow:hidden;
+}
+#umslidermanager .umaddslideritemimagepreview img, #umslidermanager .umslideredititemimagepreview img {
+  width:100%;
+  height:auto;
+}
+#umslidermanager .umslideritemimagepreview {
+  position:relative;
+  width: 260px;
+  max-width:100%;
+  height: 200px;
+  overflow:hidden;
+}
+#umslidermanager .umslideritems .col-md {
+  width:260px !important;
+  flex-grow: 0 !important;
+  max-width:none;
+}
+@media (max-width: 991px) {
+  #umslidermanager .umslideritemimagepreview {
+    width: 200px;
+    height: 150px;
+  }
+  #umslidermanager .umslideritems .col-md {
+    width:200px !important;
+  }
+}
+#umslidermanager .umslideritems h4 {
+  font-size: 18px;
+}

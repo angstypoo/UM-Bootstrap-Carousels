@@ -1,0 +1,128 @@
+/** public facing css **/
+
+div.um-slider-basic {
+  position:relative;
+}
+.um-slider-basic .um-carousel-image-container {
+  height:550px;
+  overflow:hidden;
+}
+.um-slider-basic .um-carousel-image-container img {
+  min-width:100%;
+  max-width: none !important;
+  max-height: none !important;
+}
+.um-slider-basic .carousel-caption {
+  left:0;
+  bottom:0;
+  padding-bottom:40px;
+  width:100%;
+  background-color:#FFFFFF;
+  background-color:rgba(256, 256, 256, .6);
+}
+.um-slider-basic .um-caption-a {
+  text-align:right;
+  padding-right:3%;
+}
+.um-slider-basic .carousel-item h5, .um-slider-basic .carousel-item p, .um-slider-basic .carousel-item a {
+  color:#1d1912;
+  font-family: 'Raleway', sans-serif;
+  text-transform:none !important;
+}
+.um-slider-basic .carousel-item h5 {
+  font-size:32px;
+  font-size:2.5rem;
+  letter-spacing: .15em;
+}
+.um-slider-basic .carousel-item p {
+  font-size: 18px;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+.um-slider-basic .carousel-item a {
+  font-size: 22px;
+  font-size: 1.5rem;
+  font-weight: 600;
+  box-shadow: none !important;
+  text-decoration:none;
+}
+.um-slider-basic .carousel-item a:hover {
+  text-decoration:underline;
+}
+@media (max-width: 1400px) {
+  .um-slider-basic .carousel-item h5 {
+    font-size:22px;
+    font-size:1.5rem;
+    letter-spacing: .15em;
+  }
+  .um-slider-basic .carousel-item p {
+    font-size: 14px;
+    font-size: 1rem;
+  }
+  .um-slider-basic .carousel-item a {
+    font-size: 16px;
+    font-size: 1.2rem;
+  }
+  .um-slider-basic .um-caption-a {
+    position:absolute;
+    right:3%;
+    top:45%;
+    top:calc(50% - 22px);
+  }
+}
+@media (max-width: 1199px) {
+  .um-slider-basic .um-caption-h {
+    text-align:center;
+    padding:4px;
+  }
+  .um-slider-basic .um-caption-p {
+    text-align:center;
+    padding:4px;
+    padding-left:20%;
+    padding-right:20%;
+  }
+  .um-slider-basic .um-caption-a {
+    text-align:center;
+    padding:4px;
+    position:static;
+  }
+  .um-slider-basic .carousel-caption {
+    position:relative;
+  }
+  .um-slider-basic .carousel-indicators li {
+    background-color:#1d1912;
+  }
+}
+@media (min-width: 1025px) {
+  .um-slider-basic .um-carousel-image-container  {
+    height:550px;
+  }
+}
+@media (max-width: 1024px) {
+  .um-slider-basic .um-carousel-image-container  {
+    height:300px;
+  }
+}
+@media (max-width:768px) {
+  .um-slider-basic .carousel-caption {
+    padding:5px;
+    padding-bottom:35px;
+  }
+  .um-slider-basic.carousel-indicators {
+    margin-bottom:.5rem;
+  }
+  .um-slider-basic .carousel-item h5 {
+    font-size:20px;
+    font-size:1.4rem;
+    letter-spacing: .15em;
+  }
+  .um-slider-basic .carousel-item p {
+    font-size: 12px;
+    font-size: .9rem;
+    font-weight:400;
+  }
+  .um-slider-basic .carousel-item a {
+    font-size: 14px;
+    font-size: 1.1rem;
+  }
+}
