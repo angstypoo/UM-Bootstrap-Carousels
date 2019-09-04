@@ -30,3 +30,11 @@ It eliminates some of the requirements for configuring a usable bootstrap 4 caro
 3. Begin Creating bootstrap 4 carousels by clicking Carousels (wp admin menu) > Add Slider/Carousel
 4. Manage Existing Carousels by clicking Carousels (wp admin menu) > Carousels (Dropdown) and select your carousel
 5. Change Settings for Carousels by clicking Carousels (wp admin menu) > Carousels (Dropdown) > Settings
+
+## Changelog
+
+1.0.2
+* Fixed a bug related to image thumbnail resizing in admin
+
+1.0.3
+* Modified bootstrap inclusion in admin facing pages to only be specific to this plugin

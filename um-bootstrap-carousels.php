@@ -11,7 +11,7 @@
  * @wordpress-plugin
  * Plugin Name:       UM Bootstrap Carousels
  * Description:       Create and Manage Bootstrap 4 Carousels
- * Version:           1.0.2
+ * Version:           1.0.3
  * Author:            Bryce Leue
  * License:           GPL-2.0+
  * License URI:       http://www.gnu.org/licenses/gpl-2.0.txt
@@ -26,7 +26,7 @@ if ( ! defined( 'WPINC' ) ) {
 }
 
 //version control handled here
-define( 'UM_BOOTSTRAP_CAROUSELS_VERSION', '1.0.2');
+define( 'UM_BOOTSTRAP_CAROUSELS_VERSION', '1.0.3');
 
 //register activation hook
 function um_bootstrap_carousels_activate() {

@@ -576,11 +576,31 @@ class Um_Bootstrap_Carousels_Admin {
     return base64_encode($svg);
   }
 
+  public function admin_plugin_global_actions() {
+
+    add_action('admin_post_um_add_slider', array( $this, 'add_slider') );
+
+    add_action('admin_post_um_delete_slider', array( $this, 'delete_slider') );
+
+    add_action('admin_post_um_add_slider_item', array( $this, 'add_slider_item') );
+
+    add_action('admin_post_um_edit_slider_item', array( $this, 'edit_slider_item') );
+
+    add_action('admin_post_um_delete_slider_item', array( $this, 'delete_slider_item') );
+
+    add_action('admin_post_umbc_save_slider_settings', array( $this, 'save_slider_settings') );
+
+    add_action( 'admin_init', array( $this, 'create_query_vars' ) );
+
+  }
+
   public function add_to_admin() {
     $pagetitle = __("Carousel Management", "um-bootstrap-carousels");
     $menutitle = __("Carousels", "um-bootstrap-carousels");
     $iconsvg='data:image/svg+xml;base64,'.$this->encode_svg();
-    add_menu_page($pagetitle, $menutitle, 'manage_options', 'carousel-management', array($this, 'display_menu_page'), $iconsvg);
+    $hook = add_menu_page($pagetitle, $menutitle, 'manage_options', 'carousel-management', array($this, 'display_menu_page'), $iconsvg);
+    //only enqueue css js and assets for plugin pages
+    add_action('load-' . $hook, array($this, 'enqueue') );
   }
 
 }

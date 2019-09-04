@@ -95,27 +95,15 @@ if ( ! class_exists( 'Um_Bootstrap_Carousels') ) :
      * The only contact this plugin has with the database is with the three options it creates - um-bootstrap-carousels, um-bootstrap-carousels-settings, and um-bootstrap-carousel-notices
      *
      */
+
     private function admin_hooks() {
 
       $admin = new Um_Bootstrap_Carousels_Admin( $this->get_version() );
 
-      add_action('admin_enqueue_scripts', array( $admin, 'enqueue' ) );
-
+      //add the plugin to the menu
       add_action('admin_menu', array( $admin, 'add_to_admin' ) );
-
-      add_action('admin_post_um_add_slider', array( $admin, 'add_slider') );
-
-      add_action('admin_post_um_delete_slider', array( $admin, 'delete_slider') );
-
-      add_action('admin_post_um_add_slider_item', array( $admin, 'add_slider_item') );
-
-      add_action('admin_post_um_edit_slider_item', array( $admin, 'edit_slider_item') );
-
-      add_action('admin_post_um_delete_slider_item', array( $admin, 'delete_slider_item') );
-
-      add_action('admin_post_umbc_save_slider_settings', array( $admin, 'save_slider_settings') );
-
-		  add_action( 'admin_init', array( $admin, 'create_query_vars' ) );
+      //load global admin actions
+      $admin->admin_plugin_global_actions();
 
     }
 
